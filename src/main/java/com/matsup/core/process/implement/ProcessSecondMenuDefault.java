@@ -27,7 +27,6 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 
 	@Override
 	public void execute() {
-
 		if (dataBean.getPoints()!= null) {
 			dataBean.setPoints( dataBean.getPoints());
 			while (true) {
@@ -35,13 +34,13 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 
 				int option = principalMenu();
 
-				if (validateNotExit(option)) break;
+				if (validateIsExit(option)) break;
 			}
 		}
 	}
 
 
-	private static boolean validateNotExit(int option) {
+	private static boolean validateIsExit(int option) {
 		return option == 3;
 	}
 
