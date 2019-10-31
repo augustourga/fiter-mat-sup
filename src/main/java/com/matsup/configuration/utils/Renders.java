@@ -3,10 +3,15 @@ package com.matsup.configuration.utils;
 public class Renders {
 
 	public static void renderSecondDescription() {
-		System.out.println("|  1)		 |");
-		System.out.println("|  2)		 |");
-		System.out.println("|  3)     |");
-		System.out.println("|     					    {(a,b),(c,d),(e,d)}    								 |\n\n\n\n");
+		System.out.println("\n|--------------------------------------------------------------------------------|");
+		System.out.println("| ¿Qué método desea utilizar para obtener el polinomio interpolante?     		 |");
+		System.out.println("|             																 	 |");
+		System.out.println("| 1)  Lagrange																 	 |");
+		System.out.println("| 2)  Newton Gregory Progresivo													 |");
+		System.out.println("| 3)  Newton Gregory Regresivo													 |");
+		System.out.println("|--------------------------------------------------------------------------------|\n\n");
+
+
 	}
 
 	public static void renderPrincipalDescription() {

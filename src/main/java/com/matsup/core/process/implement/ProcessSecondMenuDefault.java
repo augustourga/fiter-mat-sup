@@ -8,6 +8,8 @@ import com.matsup.configuration.utils.Renders;
 import com.matsup.core.ProcessSecondMenu;
 
 import javax.inject.Singleton;
+import java.util.HashMap;
+import java.util.Map;
 
 @Singleton
 public class ProcessSecondMenuDefault implements ProcessSecondMenu {
@@ -16,6 +18,8 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 
 	private DataBean dataBean;
 
+	private Map<Integer, String> strategy = new HashMap<>();
+
 	private Gson json;
 
 	@Inject
@@ -23,41 +27,22 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 		this.processSecondMenu = processSecondMenu;
 		this.dataBean = dataBean;
 		this.json = json;
+		this.strategy.put(1,"Lagrange");
+		this.strategy.put(2,"Newton Gregory Progresivo");
+		this.strategy.put(3,"Newton Gregory Regresivo");
+
+
 	}
 
 	@Override
 	public void execute() {
 		if (dataBean.getPoints()!= null) {
-			dataBean.setPoints( dataBean.getPoints());
 			while (true) {
 				Renders.renderSecondDescription();
-
-				int option = principalMenu();
-
-				if (validateIsExit(option)) break;
+				String option = this.strategy.get(Keyin.inInt("> "));
+				System.out.println("\nSe ha seleccionado: " + option);
 			}
 		}
 	}
 
-
-	private static boolean validateIsExit(int option) {
-		return option == 3;
-	}
-
-
-	private static int principalMenu() {
-		int option = Keyin.inInt("> ");
-		switch (option) {
-			case 1:
-				System.out.println("Option 1 selected");
-			case 2:
-				System.out.println("Option 2 selected");
-			case 3:
-				System.out.println("Exit selected");
-				break;
-			default:
-				System.out.println("Invalid selection");
-		}
-		return option;
-	}
 }
