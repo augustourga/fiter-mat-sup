@@ -25,3 +25,14 @@ dependencies {
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+task run(type: JavaExec) {
+    main = 'com.matsup.configuration.Main'
+    classpath = sourceSets.main.runtimeClasspath
+    standardInput = System.in
+}
+
