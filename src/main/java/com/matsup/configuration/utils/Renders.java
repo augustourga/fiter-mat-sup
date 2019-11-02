@@ -13,8 +13,6 @@ public class Renders {
 		System.out.println("| 3)  Alterar valores iniciales.												 |");
 		System.out.println("| 4)  Finalizar              													 |");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
-
-
 	}
 
 	public static void renderSecondDescription() {
@@ -43,9 +41,11 @@ public class Renders {
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 	}
 
-	public static void renderPolynom(Polynom polynom) {
+	public static void renderPolynom(Polynom polynom, int degree, Boolean equispaced) {
 		System.out.println("\n|--------------------------------------------------------------------------------|\n");
 		System.out.println("  El polinomio generado es: P(X)= " + polynom.toString());
+		System.out.println("\n  El grado de P(X) es  " + degree);
+		System.out.println("\n  ¿Es equiespaciado?  " + equispaced);
 		System.out.println("\n|--------------------------------------------------------------------------------|\n\n");
 
 	}

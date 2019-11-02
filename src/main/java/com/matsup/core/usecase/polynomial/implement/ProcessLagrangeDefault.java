@@ -34,10 +34,12 @@ public class ProcessLagrangeDefault extends ProcessCommonPolinomial implements P
 
 		this.dataBean.setGeneratedPolynom(lagrangePolynom);
 		this.dataBean.setEquispaced(ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
-		this.dataBean.setSubPolynoms(lxiList);
+		this.dataBean.setDegree(lagrangePolynom.degree());
 		this.dataBean.setSubPolynoms(lxiList);
 
-		Renders.renderPolynom(lagrangePolynom);
+		Renders.renderPolynom(lagrangePolynom,
+				this.dataBean.getGeneratedPolynom().degree(),
+				this.dataBean.getEquispaced());
 
 	}
 
