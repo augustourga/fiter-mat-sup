@@ -1,7 +1,6 @@
 package com.matsup.core.usecase.menu.implement;
 
 import com.google.inject.Inject;
-import com.matsup.configuration.utils.DataBean;
 import com.matsup.configuration.utils.Keyin;
 import com.matsup.configuration.utils.Renders;
 import com.matsup.core.usecase.menu.ProcessSecondMenu;
@@ -15,20 +14,12 @@ import java.util.Map;
 @Singleton
 public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 
-
-	private ProcessPolynomialGenerator processNewtonGregoryProgresive;
-	private ProcessPolynomialGenerator processNewtonGregoryRegresive;
-	private ProcessPolynomialGenerator processLagrange;
-
-
-
 	private Map<Integer, ProcessPolynomialGenerator> strategy = new HashMap<>();
 
-
 	@Inject
-	public ProcessSecondMenuDefault(@Named("lagrange")ProcessPolynomialGenerator  processLagrange,
-									@Named("newtonGregoryProgresive")ProcessPolynomialGenerator  processNewtonGregoryProgresive,
-									@Named("newtonGregoryRegresive")ProcessPolynomialGenerator  processNewtonGregoryRegresive) {
+	public ProcessSecondMenuDefault(@Named("lagrange") ProcessPolynomialGenerator processLagrange,
+									@Named("newtonGregoryProgresive") ProcessPolynomialGenerator processNewtonGregoryProgresive,
+									@Named("newtonGregoryRegresive") ProcessPolynomialGenerator processNewtonGregoryRegresive) {
 		this.strategy.put(1, processLagrange);
 		this.strategy.put(2, processNewtonGregoryProgresive);
 		this.strategy.put(3, processNewtonGregoryRegresive);
@@ -38,15 +29,17 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 
 	@Override
 	public void execute() {
-			while (true) {
-				Renders.renderSecondDescription();
-				Integer optionSelected = Keyin.inInt("> ");
+		while (true) {
+			Renders.renderSecondDescription();
+			Integer optionSelected = Keyin.inInt("> ");
 
-				if (optionSelected < 4) {
-				 this.strategy.get(optionSelected).execute();
-				} else { break; }
+			if (optionSelected < 4) {
+				this.strategy.get(optionSelected).execute();
+			} else {
+				break;
 			}
 		}
+	}
 
 
 }

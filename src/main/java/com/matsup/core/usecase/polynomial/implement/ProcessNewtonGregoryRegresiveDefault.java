@@ -1,6 +1,6 @@
 package com.matsup.core.usecase.polynomial.implement;
 
-import com.matsup.configuration.utils.DataBean;
+import com.matsup.core.entities.DataBean;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 
 import javax.inject.Inject;
@@ -19,7 +19,7 @@ public class ProcessNewtonGregoryRegresiveDefault implements ProcessPolynomialGe
 
 	@Override
 	public void execute() {
-		System.out.println("Voy a generar el polinomio de NGR con estos puntos: "  + this.dataBean.getPoints().toString());
+		System.out.println("Voy a generar el polinomio de NGR con estos puntos: " + this.dataBean.getPoints().toString());
 
 	}
 }

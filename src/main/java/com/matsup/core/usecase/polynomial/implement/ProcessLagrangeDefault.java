@@ -1,8 +1,10 @@
 package com.matsup.core.usecase.polynomial.implement;
 
 
-import com.matsup.configuration.utils.DataBean;
+import com.matsup.core.entities.DataBean;
 import com.matsup.configuration.utils.Renders;
+import com.matsup.core.entities.Point;
+import com.matsup.core.usecase.menu.ProcessThirdMenu;
 import com.matsup.core.usecase.polynomial.ProcessCommonPolinomial;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 import com.matsup.core.utils.LxisGenerator;
@@ -18,17 +20,30 @@ public class ProcessLagrangeDefault extends ProcessCommonPolinomial implements P
 
 	private DataBean dataBean;
 
+	private ProcessThirdMenu processThirdMenu;
+
 	@Inject
-	public ProcessLagrangeDefault(DataBean dataBean) {
+	public ProcessLagrangeDefault(DataBean dataBean, ProcessThirdMenu processThirdMenu) {
 		this.dataBean = dataBean;
+		this.processThirdMenu = processThirdMenu;
 	}
 
 	@Override
 	public void execute() {
+
 		List<Polynom> lxiList = LxisGenerator.generateLxis(this.dataBean.getPoints());
 		Polynom lagrangePolynom = generateLagrangePolynom(lxiList);
 
+		this.dataBean.setGeneratedPolynom(lagrangePolynom);
+		this.dataBean.setEquispaced(ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
+		this.dataBean.setSubPolynoms(lxiList);
+		this.dataBean.setSubPolynoms(lxiList);
+
 		Renders.renderPolynom(lagrangePolynom);
+
+		this.processThirdMenu.execute();
+
+
 	}
 
 	private Polynom generateLagrangePolynom(List<Polynom> lxiList) {

@@ -66,6 +66,18 @@ public class Keyin {
 		}
 	}
 
+	public static double inDouble(String prompt) {
+		while (true) {
+			inputFlush();
+			printPrompt(prompt);
+			try {
+				return Double.valueOf(inString().trim());
+			} catch (Exception e) {
+				System.out.println("Invalid input. Not an integer");
+			}
+		}
+	}
+
 	public static List<Point> initPoints(String prompt, Gson json) {
 		while (true) {
 			inputFlush();

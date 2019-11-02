@@ -4,6 +4,19 @@ import com.matsup.core.utils.Polynom;
 
 public class Renders {
 
+	public static void renderThirdDescription() {
+		System.out.println("\n|--------------------------------------------------------------------------------|");
+		System.out.println("| ¿Y ahora? ¿Qué podemos hacer por ti?                                   		 |");
+		System.out.println("|             																 	 |");
+		System.out.println("| 1)  Mostrar pasos de cálculo	             								 	 |");
+		System.out.println("| 2)  Especializar el polinomio en un valor K.									 |");
+		System.out.println("| 3)  Alterar valores iniciales.												 |");
+		System.out.println("| 4)  Finalizar              													 |");
+		System.out.println("|--------------------------------------------------------------------------------|\n\n");
+
+
+	}
+
 	public static void renderSecondDescription() {
 		System.out.println("\n|--------------------------------------------------------------------------------|");
 		System.out.println("| ¿Qué método desea utilizar para obtener el polinomio interpolante?     		 |");
@@ -32,8 +45,31 @@ public class Renders {
 
 	public static void renderPolynom(Polynom polynom) {
 		System.out.println("\n|--------------------------------------------------------------------------------|\n");
-		System.out.println("  El polinomio generado es: P(X)= "+ polynom.toString());
+		System.out.println("  El polinomio generado es: P(X)= " + polynom.toString());
 		System.out.println("\n|--------------------------------------------------------------------------------|\n\n");
+
+	}
+
+	public static void renderSubPolynoms(Polynom polynom, int i) {
+
+		System.out.println("|--------------------------------------------------------------------------------|");
+		System.out.println("| Li("+i+") = "+ polynom.toString()) 			 ;
+		System.out.println("|--------------------------------------------------------------------------------|\n\n");
+
+	}
+
+	public static void renderSpecializePolynom(double v, Double inDouble) {
+
+		System.out.println("|--------------------------------------------------------------------------------|");
+		System.out.println("| El valor del P("+inDouble+") = " + v 	)		 ;
+		System.out.println("|--------------------------------------------------------------------------------|\n\n");
+
+	}
+
+	public static void renderSpecializeInput() {
+		System.out.println("|--------------------------------------------------------------------------------|");
+		System.out.println("| Ingrese el valor en el que desea especializar el polinomio. Ej 2.1 			 |");
+		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 
 	}
 }
