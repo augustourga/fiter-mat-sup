@@ -20,12 +20,10 @@ public class ProcessLagrangeDefault extends ProcessCommonPolinomial implements P
 
 	private DataBean dataBean;
 
-	private ProcessThirdMenu processThirdMenu;
 
 	@Inject
-	public ProcessLagrangeDefault(DataBean dataBean, ProcessThirdMenu processThirdMenu) {
+	public ProcessLagrangeDefault(DataBean dataBean) {
 		this.dataBean = dataBean;
-		this.processThirdMenu = processThirdMenu;
 	}
 
 	@Override
@@ -40,9 +38,6 @@ public class ProcessLagrangeDefault extends ProcessCommonPolinomial implements P
 		this.dataBean.setSubPolynoms(lxiList);
 
 		Renders.renderPolynom(lagrangePolynom);
-
-		this.processThirdMenu.execute();
-
 
 	}
 

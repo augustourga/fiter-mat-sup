@@ -31,7 +31,7 @@ public class ProcessThirdMenuDefault implements ProcessThirdMenu {
 			Renders.renderThirdDescription();
 			Integer optionSelected = Keyin.inInt("> ");
 
-			if (optionSelected < 4) {
+			if (optionSelected < 3) {
 				this.strategy.get(optionSelected).execute();
 			} else {
 				break;

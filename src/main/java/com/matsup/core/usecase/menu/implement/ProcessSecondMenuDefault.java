@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 import com.matsup.configuration.utils.Keyin;
 import com.matsup.configuration.utils.Renders;
 import com.matsup.core.usecase.menu.ProcessSecondMenu;
+import com.matsup.core.usecase.menu.ProcessThirdMenu;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 
 import javax.inject.Named;
@@ -16,10 +17,15 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 
 	private Map<Integer, ProcessPolynomialGenerator> strategy = new HashMap<>();
 
+	private ProcessThirdMenu processThirdMenu;
+
+
 	@Inject
 	public ProcessSecondMenuDefault(@Named("lagrange") ProcessPolynomialGenerator processLagrange,
 									@Named("newtonGregoryProgresive") ProcessPolynomialGenerator processNewtonGregoryProgresive,
-									@Named("newtonGregoryRegresive") ProcessPolynomialGenerator processNewtonGregoryRegresive) {
+									@Named("newtonGregoryRegresive") ProcessPolynomialGenerator processNewtonGregoryRegresive,
+									ProcessThirdMenu processThirdMenu) {
+		this.processThirdMenu = processThirdMenu;
 		this.strategy.put(1, processLagrange);
 		this.strategy.put(2, processNewtonGregoryProgresive);
 		this.strategy.put(3, processNewtonGregoryRegresive);
@@ -38,6 +44,9 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 			} else {
 				break;
 			}
+
+			this.processThirdMenu.execute();
+
 		}
 	}
 
