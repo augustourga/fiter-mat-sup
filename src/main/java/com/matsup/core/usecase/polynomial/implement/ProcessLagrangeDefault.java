@@ -2,6 +2,7 @@ package com.matsup.core.usecase.polynomial.implement;
 
 
 import com.matsup.configuration.utils.DataBean;
+import com.matsup.configuration.utils.Renders;
 import com.matsup.core.usecase.polynomial.ProcessCommonPolinomial;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 import com.matsup.core.utils.LxisGenerator;
@@ -24,12 +25,10 @@ public class ProcessLagrangeDefault extends ProcessCommonPolinomial implements P
 
 	@Override
 	public void execute() {
-		System.out.println("Voy a generar el polinomio de Lagrange con estos puntos: " + this.dataBean.getPoints().toString());
-
 		List<Polynom> lxiList = LxisGenerator.generateLxis(this.dataBean.getPoints());
 		Polynom lagrangePolynom = generateLagrangePolynom(lxiList);
 
-		System.out.println("Polinomio generado: P(X)=  " + lagrangePolynom.toString());
+		Renders.renderPolynom(lagrangePolynom);
 	}
 
 	private Polynom generateLagrangePolynom(List<Polynom> lxiList) {

@@ -1,5 +1,7 @@
 package com.matsup.configuration.utils;
 
+import com.matsup.core.utils.Polynom;
+
 public class Renders {
 
 	public static void renderSecondDescription() {
@@ -25,5 +27,12 @@ public class Renders {
 		System.out.println("|  							 Matemática Superior   								 |");
 		System.out.println("|  							 [FINTER] - 2c 2019    								 |");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
+	}
+
+	public static void renderPolynom(Polynom polynom) {
+		System.out.println("\n|--------------------------------------------------------------------------------|\n");
+		System.out.println("  El polinomio generado es: P(X)= "+ polynom.toString());
+		System.out.println("\n|--------------------------------------------------------------------------------|\n\n");
+
 	}
 }
