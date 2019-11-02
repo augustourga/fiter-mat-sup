@@ -1,12 +1,12 @@
-package com.matsup.core.process.implement;
+package com.matsup.core.usecase.menu.implement;
 
 import com.google.gson.Gson;
 import com.google.inject.Inject;
 import com.matsup.configuration.utils.DataBean;
 import com.matsup.configuration.utils.Keyin;
 import com.matsup.configuration.utils.Renders;
-import com.matsup.core.ProcessFirstMenu;
-import com.matsup.core.ProcessSecondMenu;
+import com.matsup.core.usecase.menu.ProcessFirstMenu;
+import com.matsup.core.usecase.menu.ProcessSecondMenu;
 
 import javax.inject.Singleton;
 

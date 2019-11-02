@@ -4,7 +4,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.matsup.configuration.utils.BasicModule;
 import com.matsup.configuration.utils.Renders;
-import com.matsup.core.ProcessFirstMenu;
+import com.matsup.core.usecase.menu.ProcessFirstMenu;
 
 
 public class Main {
