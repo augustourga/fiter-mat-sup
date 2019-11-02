@@ -11,6 +11,7 @@ public class Renders {
 		System.out.println("| 1)  Lagrange																 	 |");
 		System.out.println("| 2)  Newton Gregory Progresivo													 |");
 		System.out.println("| 3)  Newton Gregory Regresivo													 |");
+		System.out.println("| 4)  Finalizar              													 |");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 
 
