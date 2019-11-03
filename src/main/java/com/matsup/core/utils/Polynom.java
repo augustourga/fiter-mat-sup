@@ -174,9 +174,14 @@ public class Polynom {
 		}
 	}
 
-	public boolean equals(Polynom polynom) {
+	@Override
+	public boolean equals(Object polynom) {
+		if (this == polynom) return true;
+		if (polynom == null || getClass() != polynom.getClass()) return false;
+		Polynom that = (Polynom) polynom;
+
 		double[] c1 = this.getCoeffs();
-		double[] c2 = polynom.getCoeffs();
+		double[] c2 = that.getCoeffs();
 		boolean isTrue = true;
 
 		if (c1.length == c2.length) {
@@ -277,27 +282,6 @@ public class Polynom {
 		return p;
 	}
 
-	public Polynom power(int n) {
-		if (n < 0) {
-			System.out.println("Only for non-negative n!");
-			return null;
-		} else if (n == 0) {
-			return new Polynom();
-		} else if (n == 1) {
-			return new Polynom(this.getCoeffs());
-		}
-
-		Polynom p = new Polynom(this.getCoeffs());
-
-		int i = n;
-		while (i > 1) {
-			p = p.multiply(this);
-			i--;
-		}
-		p.recheck();
-
-		return p;
-	}
 
 	public Polynom differentiate() {
 		double[] c = this.getCoeffs();

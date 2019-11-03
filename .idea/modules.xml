@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mat-sup.iml" filepath="$PROJECT_DIR$/.idea/modules/mat-sup.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mat-sup_main.iml" filepath="$PROJECT_DIR$/.idea/modules/mat-sup_main.iml" group="mat-sup" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mat-sup_test.iml" filepath="$PROJECT_DIR$/.idea/modules/mat-sup_test.iml" group="mat-sup" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fiter-mat-sup.iml" filepath="$PROJECT_DIR$/.idea/modules/fiter-mat-sup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fiter-mat-sup_main.iml" filepath="$PROJECT_DIR$/.idea/modules/fiter-mat-sup_main.iml" group="fiter-mat-sup" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fiter-mat-sup_test.iml" filepath="$PROJECT_DIR$/.idea/modules/fiter-mat-sup_test.iml" group="fiter-mat-sup" />
     </modules>
   </component>
 </project>
