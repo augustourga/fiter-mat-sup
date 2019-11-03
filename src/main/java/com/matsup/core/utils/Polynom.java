@@ -282,27 +282,6 @@ public class Polynom {
 		return p;
 	}
 
-	public Polynom power(int n) {
-		if (n < 0) {
-			System.out.println("Only for non-negative n!");
-			return null;
-		} else if (n == 0) {
-			return new Polynom();
-		} else if (n == 1) {
-			return new Polynom(this.getCoeffs());
-		}
-
-		Polynom p = new Polynom(this.getCoeffs());
-
-		int i = n;
-		while (i > 1) {
-			p = p.multiply(this);
-			i--;
-		}
-		p.recheck();
-
-		return p;
-	}
 
 	public Polynom differentiate() {
 		double[] c = this.getCoeffs();

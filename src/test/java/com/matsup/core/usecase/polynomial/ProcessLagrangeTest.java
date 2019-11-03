@@ -38,7 +38,7 @@ public class ProcessLagrangeTest {
 		verify(this.dataBean).setDegree(3);
 		verify(this.dataBean).setGeneratedPolynom(new Polynom("1.0 - 0.6666666666666669·x + 0.75·x^2 - 0.08333333333333337·x^3"));
 		verify(this.dataBean).setEquispaced(Boolean.FALSE);
-		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(new Polynom("1.0"),
+		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(
 				new Polynom("1.0 - 1.75·x + 0.875·x^2 - 0.125·x^3"),
 				new Polynom("2.6666666666666665·x - 2.0·x^2 + 0.3333333333333333·x^3"),
 				new Polynom("- 1.0·x + 1.25·x^2 - 0.25·x^3"),
