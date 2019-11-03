@@ -1,12 +1,12 @@
-package com.matsup.core.usecase.polynomial;
+package com.matsup.core.utils;
 
 import com.matsup.core.entities.Point;
 
 import java.util.List;
 
-public abstract class ProcessCommonPolinomial {
+public  class ProcessCommonPolinomial {
 
-	protected static Boolean isEquispaced(List<Point> points) {
+	public static Boolean isEquispaced(List<Point> points) {
 		Boolean isEquispaced = Boolean.TRUE;
 		Double distance = getDistance(points.get(0), points.get(1));
 
@@ -18,6 +18,7 @@ public abstract class ProcessCommonPolinomial {
 		}
 		return isEquispaced;
 	}
+
 
 	private static Double getDistance(Point point, Point point1) {
 		return point1.getX() - point.getX();

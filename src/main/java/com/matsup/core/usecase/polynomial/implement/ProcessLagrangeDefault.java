@@ -3,9 +3,7 @@ package com.matsup.core.usecase.polynomial.implement;
 
 import com.matsup.core.entities.DataBean;
 import com.matsup.configuration.utils.Renders;
-import com.matsup.core.entities.Point;
-import com.matsup.core.usecase.menu.ProcessThirdMenu;
-import com.matsup.core.usecase.polynomial.ProcessCommonPolinomial;
+import com.matsup.core.utils.ProcessCommonPolinomial;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 import com.matsup.core.utils.LxisGenerator;
 import com.matsup.core.utils.Polynom;
@@ -16,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Singleton
-public class ProcessLagrangeDefault extends ProcessCommonPolinomial implements ProcessPolynomialGenerator {
+public class ProcessLagrangeDefault implements ProcessPolynomialGenerator {
 
 	private DataBean dataBean;
 

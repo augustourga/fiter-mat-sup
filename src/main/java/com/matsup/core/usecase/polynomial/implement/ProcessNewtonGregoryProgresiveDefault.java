@@ -1,9 +1,11 @@
 package com.matsup.core.usecase.polynomial.implement;
 
+import com.matsup.configuration.utils.Renders;
 import com.matsup.core.entities.DataBean;
-import com.matsup.core.entities.Point;
+import com.matsup.core.utils.ProcessCommonPolinomial;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 import com.matsup.core.utils.FinitesDifferencesGenerator;
+import com.matsup.core.utils.Polynom;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -25,8 +27,23 @@ public class ProcessNewtonGregoryProgresiveDefault implements ProcessPolynomialG
 	public void execute() {
 
 		Map<Integer,List<Double>> finitesDifferences = FinitesDifferencesGenerator.generateFinitesDifferences(this.dataBean.getPoints());
-		System.out.println("Voy a generar el polinomio de NGP con estos puntos: "  + this.dataBean.getPoints().toString());
+
+		List<Polynom> subPolynom = FinitesDifferencesGenerator.generateSubPolynoms(finitesDifferences,this.dataBean.getPoints());
+		Polynom newtonGregoryProgresivePolynom = generateNewtonGregoryProgresivePolynom(subPolynom);
+
+		this.dataBean.setGeneratedPolynom(newtonGregoryProgresivePolynom);
+		this.dataBean.setEquispaced(ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
+		this.dataBean.setDegree(newtonGregoryProgresivePolynom.degree());
+		this.dataBean.setSubPolynoms(subPolynom);
+
+		Renders.renderPolynom(newtonGregoryProgresivePolynom,
+				newtonGregoryProgresivePolynom.degree(),
+				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
 
 
+	}
+
+	private Polynom generateNewtonGregoryProgresivePolynom(List<Polynom> subPolynom) {
+		return subPolynom.stream().reduce(Polynom::add).get();
 	}
 }

@@ -174,9 +174,14 @@ public class Polynom {
 		}
 	}
 
-	public boolean equals(Polynom polynom) {
+	@Override
+	public boolean equals(Object polynom) {
+		if (this == polynom) return true;
+		if (polynom == null || getClass() != polynom.getClass()) return false;
+		Polynom that = (Polynom) polynom;
+
 		double[] c1 = this.getCoeffs();
-		double[] c2 = polynom.getCoeffs();
+		double[] c2 = that.getCoeffs();
 		boolean isTrue = true;
 
 		if (c1.length == c2.length) {

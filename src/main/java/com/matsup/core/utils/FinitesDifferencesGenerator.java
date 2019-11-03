@@ -60,4 +60,34 @@ public class FinitesDifferencesGenerator {
 		return ( y2 - y1 )/( x2 - x1 );
 	}
 
+	public static List<Polynom> generateSubPolynoms(Map<Integer, List<Double>> finitesDifferences, List<Point> points) {
+		List<Polynom> polynoms = new ArrayList<>();
+
+		for (int i = 0; i <= finitesDifferences.size() - 1; i++) {
+			if (i == 0) {
+				polynoms.add(new Polynom(points.get(i).getY(), i));
+			} else {
+				polynoms.add(generatePolynom(i,finitesDifferences,points));
+			}
+		}
+
+		return polynoms;
+	}
+
+	private static Polynom generatePolynom(int position, Map<Integer, List<Double>> finitesDifferences, List<Point> points) {
+		List<Polynom> polynoms = new ArrayList<>();
+
+		polynoms.add(new Polynom(finitesDifferences.get(position - 1).get(0), 0));
+
+		for (int i = 0; i <= position - 1; i++) {
+			polynoms.add(new Polynom(1.0, 1).subtract(new Polynom(points.get(i).getX(), 0)));
+		}
+
+		return productOfPolynoms(polynoms);
+	}
+
+	private static Polynom productOfPolynoms(List<Polynom> polynoms) {
+		return polynoms.stream().reduce(Polynom::multiply).get();
+	}
+
 }
