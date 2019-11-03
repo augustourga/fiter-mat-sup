@@ -26,7 +26,6 @@ public class Point {
 	}
 
 
-
 	public static final class PointBuilder {
 		private Point point;
 

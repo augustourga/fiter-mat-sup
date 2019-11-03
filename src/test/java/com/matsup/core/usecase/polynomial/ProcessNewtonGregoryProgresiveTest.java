@@ -28,6 +28,7 @@ public class ProcessNewtonGregoryProgresiveTest {
 		Point point3 = Point.builder().X(4.0).Y(13.0).build();
 		Point point4 = Point.builder().X(5.0).Y(37.0).build();
 		Point point5 = Point.builder().X(7.0).Y(151.0).build();
+
 		when(this.dataBean.getPoints()).thenReturn(Lists.newArrayList(point1, point2, point3, point4, point5));
 
 		this.instance.execute();
