@@ -23,7 +23,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     compile group: 'com.google.inject', name: 'guice', version: '4.0'
 
+    // TEST
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile(group: 'org.mockito', name: 'mockito-core', version: '2.3.5')
 }
 
 tasks.withType(JavaCompile) {

@@ -20,5 +20,33 @@ public class Point {
 	public void setY(Double y) {
 		Y = y;
 	}
+
+	public static PointBuilder builder() {
+		return new PointBuilder();
+	}
+
+
+
+	public static final class PointBuilder {
+		private Point point;
+
+		private PointBuilder() {
+			point = new Point();
+		}
+
+		public PointBuilder X(Double X) {
+			point.setX(X);
+			return this;
+		}
+
+		public PointBuilder Y(Double Y) {
+			point.setY(Y);
+			return this;
+		}
+
+		public Point build() {
+			return point;
+		}
+	}
 }
 
