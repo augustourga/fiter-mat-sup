@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="18add05c-ff8a-40b1-8741-1d30619dbcd5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/matsup/core/usecase/polynomial/implement/ProcessLagrangeDefault.java" afterPath="$PROJECT_DIR$/src/main/java/com/matsup/core/usecase/polynomial/implement/ProcessLagrangeDefault.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/matsup/core/utils/Polynom.java" afterPath="$PROJECT_DIR$/src/main/java/com/matsup/core/utils/Polynom.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessLagrangeTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessLagrangeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessNewtonGregoryProgresiveTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessNewtonGregoryProgresiveTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -83,11 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessNewtonGregoryProgresiveTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProcessNewtonGregoryProgresiveTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessNewtonGregoryProgresiveTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="28" column="84" lean-forward="false" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
+              <caret line="28" column="87" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -180,10 +176,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProcessLagrangeTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProcessLagrangeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessLagrangeTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="182">
               <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -845,7 +841,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in fiter-mat-sup_test">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="All in fiter-mat-sup_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="fiter-mat-sup_test" />
@@ -865,6 +861,25 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.matsup.configuration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.matsup.configuration.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="fiter-mat-sup_main" />
+      <envs />
     </configuration>
     <configuration name="ProcessLagrangeTest.whenProcess_mustBeProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -929,31 +944,6 @@
       <option name="PACKAGE_NAME" value="com.matsup.core.usecase.polynomial" />
       <option name="MAIN_CLASS_NAME" value="com.matsup.core.usecase.polynomial.ProcessNewtonGregoryProgresiveTest" />
       <option name="METHOD_NAME" value="whenProcessLagrangeNotEquispaced_mustBeProcess" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="ProcessNewtonGregoryProgresiveTest.whenProcess_mustBeProcess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.matsup.core.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="fiter-mat-sup_test" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.matsup.core.usecase.polynomial" />
-      <option name="MAIN_CLASS_NAME" value="com.matsup.core.usecase.polynomial.ProcessNewtonGregoryProgresiveTest" />
-      <option name="METHOD_NAME" value="whenProcess_mustBeProcess" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1048,18 +1038,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in fiter-mat-sup_test" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcess_mustBeProcess" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeNotEquispaced_mustBeProcess" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ProcessLagrangeTest.whenProcess_mustBeProcess" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeEquispaced_mustBeProcess" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeNotEquispaced_mustBeProcess" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ProcessLagrangeTest.whenProcess_mustBeProcess" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeEquispaced_mustBeProcess" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Main" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in fiter-mat-sup_test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ProcessLagrangeTest.whenProcess_mustBeProcess" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeEquispaced_mustBeProcess" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeNotEquispaced_mustBeProcess" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcess_mustBeProcess" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in fiter-mat-sup_test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProcessLagrangeTest.whenProcess_mustBeProcess" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeEquispaced_mustBeProcess" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeNotEquispaced_mustBeProcess" />
       </list>
     </recent_temporary>
   </component>
@@ -1087,8 +1077,8 @@
     <history-entry file="All_in_fiter-mat-sup_test - 2019.11.03 at 20h 22m 47s.xml">
       <configuration name="All in fiter-mat-sup_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProcessLagrangeTest_whenProcess_mustBeProcess - 2019.11.03 at 20h 11m 34s.xml">
-      <configuration name="ProcessLagrangeTest.whenProcess_mustBeProcess" configurationId="JUnit" />
+    <history-entry file="All_in_fiter-mat-sup_test - 2019.11.03 at 20h 23m 38s.xml">
+      <configuration name="All in fiter-mat-sup_test" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ProcessLagrangeTest_whenProcess_mustBeProcess - 2019.11.03 at 20h 23m 10s.xml">
       <configuration name="ProcessLagrangeTest.whenProcess_mustBeProcess" configurationId="JUnit" />
@@ -1096,8 +1086,8 @@
     <history-entry file="ProcessLagrangeTest_whenProcess_mustBeProcess - 2019.11.03 at 20h 23m 32s.xml">
       <configuration name="ProcessLagrangeTest.whenProcess_mustBeProcess" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProcessNewtonGregoryProgresiveTest_whenProcessLagrangeEquispaced_mustBeProcess - 2019.11.03 at 20h 11m 34s.xml">
-      <configuration name="ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeEquispaced_mustBeProcess" configurationId="JUnit" />
+    <history-entry file="ProcessLagrangeTest_whenProcess_mustBeProcess - 2019.11.03 at 20h 24m 43s.xml">
+      <configuration name="ProcessLagrangeTest.whenProcess_mustBeProcess" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ProcessNewtonGregoryProgresiveTest_whenProcessLagrangeEquispaced_mustBeProcess - 2019.11.03 at 20h 11m 40s.xml">
       <configuration name="ProcessNewtonGregoryProgresiveTest.whenProcessLagrangeEquispaced_mustBeProcess" configurationId="JUnit" />
@@ -1113,10 +1103,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32657000" />
+    <option name="totallyTimeSpent" value="33511000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1126,12 +1117,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925373" sideWeight="0.5171674" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.68159205" sideWeight="0.49713877" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4539801" sideWeight="0.4914163" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4539801" sideWeight="0.4914163" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.4950249" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.4950249" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1348,6 +1339,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="18" column="29" lean-forward="true" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1556,16 +1548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessNewtonGregoryProgresiveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="84" lean-forward="false" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/matsup/core/utils/Polynom.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -1595,17 +1577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/matsup/core/usecase/polynomial/implement/ProcessNewtonGregoryProgresiveDefault.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#708#709#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/matsup/core/usecase/polynomial/implement/ProcessLagrangeDefault.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -1618,8 +1589,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessLagrangeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="182">
           <caret line="40" column="64" lean-forward="true" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/matsup/core/usecase/polynomial/implement/ProcessNewtonGregoryProgresiveDefault.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/matsup/core/usecase/polynomial/ProcessNewtonGregoryProgresiveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="28" column="87" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="87" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
