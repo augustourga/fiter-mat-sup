@@ -1,11 +1,9 @@
 package com.matsup.core.utils;
 
+import com.google.common.collect.Lists;
 import com.matsup.core.entities.Point;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class FinitesDifferencesGenerator {
 	public static Map<Integer, List<Double>> generateFinitesDifferences(List<Point> points) {
@@ -90,4 +88,12 @@ public class FinitesDifferencesGenerator {
 		return polynoms.stream().reduce(Polynom::multiply).get();
 	}
 
+	public static Map<Integer, List<Double>> invertFinitesDifferences(Map<Integer, List<Double>> finitesDifferences) {
+		Map<Integer, List<Double>> inverseDifferences = new HashMap<>();
+
+		for (int i = 0; i <= finitesDifferences.size() - 1; i++) {
+			inverseDifferences.put(i,Lists.reverse(finitesDifferences.get(i)));
+		}
+		return inverseDifferences;
+	}
 }

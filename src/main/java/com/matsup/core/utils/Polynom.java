@@ -218,7 +218,7 @@ public class Polynom {
 		double[] c = new double[n];
 
 		for (int i = 0; i < m; i++) {
-			c[i] = c1[i] + c2[i];
+			c[i] = getTruncate(c1[i] + c2[i]);
 		}
 
 		if (c1.length < c2.length) {
@@ -258,7 +258,7 @@ public class Polynom {
 
 		for (int k = 0; k <= n1 + n2; k++) {
 			for (int i = 0; i <= k; i++) {
-				c[k] = c[k] + c1wide[i] * c2wide[k - i];
+				c[k] = getTruncate(c[k] + c1wide[i] * c2wide[k - i]);
 			}
 		}
 
@@ -552,5 +552,9 @@ public class Polynom {
 		}
 
 		return sPolynom;
+	}
+
+	public double getTruncate(double num) {
+		return Math.abs(num) > 0.000000001 ? num : 0.0 ;
 	}
 }

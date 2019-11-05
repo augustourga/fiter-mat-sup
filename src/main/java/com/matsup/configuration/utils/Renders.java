@@ -11,7 +11,7 @@ public class Renders {
 		System.out.println("| 1)  Mostrar pasos de cálculo	             								 	 |");
 		System.out.println("| 2)  Especializar el polinomio en un valor K.									 |");
 		System.out.println("| 3)  Alterar valores iniciales.												 |");
-		System.out.println("| 4)  Finalizar              													 |");
+		System.out.println("| 4)  Volver              													 |");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 	}
 
@@ -22,7 +22,7 @@ public class Renders {
 		System.out.println("| 1)  Lagrange																 	 |");
 		System.out.println("| 2)  Newton Gregory Progresivo													 |");
 		System.out.println("| 3)  Newton Gregory Regresivo													 |");
-		System.out.println("| 4)  Finalizar              													 |");
+		System.out.println("| 4)  Volver              													 |");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 
 
