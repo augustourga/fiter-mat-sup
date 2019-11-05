@@ -1,6 +1,10 @@
 package com.matsup.configuration.utils;
 
+import com.matsup.core.entities.Method;
 import com.matsup.core.utils.Polynom;
+
+import java.util.Collections;
+import java.util.List;
 
 public class Renders {
 
@@ -47,7 +51,6 @@ public class Renders {
 		System.out.println("\n  El grado de P(X) es  " + degree);
 		System.out.println("\n  ¿Es equiespaciado?  " + equispaced);
 		System.out.println("\n|--------------------------------------------------------------------------------|\n\n");
-
 	}
 
 	public static void renderSubPolynoms(Polynom polynom, int i) {
@@ -57,6 +60,15 @@ public class Renders {
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 
 	}
+
+	public static void renderFinitesDifferences(List<Double> list, int i) {
+
+		System.out.println("|--------------------------------------------------------------------------------|");
+		System.out.println("| Las diferencias divididas de orden ("+(i+1)+") = "+  list.toString() ) ;
+		System.out.println("|--------------------------------------------------------------------------------|\n\n");
+
+	}
+
 
 	public static void renderSpecializePolynom(double v, Double inDouble) {
 

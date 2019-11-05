@@ -2,6 +2,7 @@ package com.matsup.core.usecase.polynomial;
 
 import com.google.common.collect.Lists;
 import com.matsup.core.entities.DataBean;
+import com.matsup.core.entities.Method;
 import com.matsup.core.entities.Point;
 import com.matsup.core.usecase.polynomial.implement.ProcessLagrangeDefault;
 import com.matsup.core.utils.Polynom;
@@ -66,6 +67,7 @@ public class ProcessLagrangeTest {
 		verify(this.dataBean).setDegree(2);
 		verify(this.dataBean).setGeneratedPolynom(generatedPolynom);
 		verify(this.dataBean).setEquispaced(Boolean.FALSE);
+		verify(this.dataBean).setMethod(Method.LAGRANGE);
 		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(
 				new Polynom("2.6666666666666665 - 2.0·x + 0.3333333333333333·x^2"),
 				new Polynom("- 2.0 + 2.5·x - 0.5·x^2"),
@@ -94,6 +96,7 @@ public class ProcessLagrangeTest {
 		verify(this.dataBean).setDegree(3);
 		verify(this.dataBean).setGeneratedPolynom(new Polynom("4.0 + 3.0·x - 2.0·x^2 + 1.0·x^3"));
 		verify(this.dataBean).setEquispaced(Boolean.FALSE);
+		verify(this.dataBean).setMethod(Method.LAGRANGE);
 		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(
 				new Polynom("- 0.16666666666666666 + 0.08333333333333333·x + 0.16666666666666666·x^2 - 0.08333333333333333·x^3"),
 				new Polynom("0.6666666666666666 - 0.6666666666666666·x - 0.16666666666666666·x^2 + 0.16666666666666666·x^3"),

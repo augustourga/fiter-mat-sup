@@ -1,10 +1,13 @@
 package com.matsup.configuration.utils;
 
+import com.google.common.base.Strings;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.matsup.core.entities.Point;
+import com.sun.tools.javac.util.StringUtils;
 
 import java.lang.reflect.Type;
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,16 +86,19 @@ public class Keyin {
 			inputFlush();
 			printPrompt(prompt);
 			try {
-				return parseInput(inString().trim(), json);
+				return parseInput(inString().trim(), json) ;
 			} catch (Exception e) {
-				System.out.println("Entrada inválida. No cumple el formato especificado");
+				System.out.println("Entrada inválida. No cumple el formato especificado.");
 			}
 		}
 	}
 
 	private static List<Point> parseInput(String trim, Gson json) {
 		Type listType = new TypeToken<ArrayList<Point>>(){}.getType();
-		return json.fromJson(trim,listType);
+		if (Strings.isNullOrEmpty(trim)) throw  new InvalidParameterException();
+		List<Point> list =  json.fromJson(trim,listType);
+		if (list.isEmpty()) throw new InvalidParameterException();
+		return list;
 	}
 
 }

@@ -2,6 +2,7 @@ package com.matsup.core.usecase.polynomial;
 
 import com.google.common.collect.Lists;
 import com.matsup.core.entities.DataBean;
+import com.matsup.core.entities.Method;
 import com.matsup.core.entities.Point;
 import com.matsup.core.usecase.polynomial.implement.ProcessNewtonGregoryProgresiveDefault;
 import com.matsup.core.utils.Polynom;
@@ -41,6 +42,8 @@ public class ProcessNewtonGregoryProgresiveTest {
 		verify(this.dataBean).setDegree(3);
 		verify(this.dataBean).setGeneratedPolynom(new Polynom("- 3.0 + 8.0·x - 5.0·x^2 + 1.0·x^3"));
 		verify(this.dataBean).setEquispaced(Boolean.FALSE);
+		verify(this.dataBean).setMethod(Method.PROGRESIVE_NEWTON_GREGORY);
+
 		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(new Polynom("1.0"),
 				new Polynom("- 1.0 + 1.0·x"),
 				new Polynom("9.0 - 12.0·x + 3.0·x^2"),
@@ -67,6 +70,8 @@ public class ProcessNewtonGregoryProgresiveTest {
 		verify(this.dataBean).setDegree(3);
 		verify(this.dataBean).setGeneratedPolynom(new Polynom("1.0 - 0.16666666666666669·x + 0.16666666666666666·x^3"));
 		verify(this.dataBean).setEquispaced(Boolean.TRUE);
+		verify(this.dataBean).setMethod(Method.PROGRESIVE_NEWTON_GREGORY);
+
 		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(new Polynom("1.0"),
 				new Polynom("0.0"),
 				new Polynom("- 0.5·x + 0.5·x^2"),
