@@ -555,6 +555,6 @@ public class Polynom {
 	}
 
 	public double getTruncate(double num) {
-		return Math.abs(num) > 0.000000001 ? num : 0.0 ;
+		return Math.abs(num) > 0.00001 ? num : 0.0 ;
 	}
 }

@@ -101,4 +101,17 @@ public class Keyin {
 		return list;
 	}
 
+	public static int pointMenu(String s, int size) {
+		while (true) {
+			inputFlush();
+			try {
+				int option =  inInt(s);
+				if(option > (size+2) ) throw new InvalidParameterException();
+				return option;
+			} catch (Exception e) {
+				System.out.println("No se encontró la opción deseada");
+			}
+		}
+
+	}
 }
