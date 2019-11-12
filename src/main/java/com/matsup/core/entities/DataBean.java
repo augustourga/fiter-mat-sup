@@ -1,6 +1,5 @@
 package com.matsup.core.entities;
 
-import com.matsup.core.utils.FinitesDifferencesGenerator;
 import com.matsup.core.utils.Polynom;
 
 import java.util.List;
@@ -13,6 +12,8 @@ public class DataBean {
 
 	Polynom generatedPolynom;
 
+	Polynom lastGeneratedPolynom;
+
 	List<Polynom> subPolynoms;
 
 	Boolean isEquispaced;
@@ -21,7 +22,7 @@ public class DataBean {
 
 	Method method;
 
-	Map<Integer,List<Double>> finitesDifferences;
+	Map<Integer, List<Double>> finitesDifferences;
 
 	public List<Point> getPoints() {
 		return points;
@@ -36,6 +37,7 @@ public class DataBean {
 	}
 
 	public void setGeneratedPolynom(Polynom generatedPolynom) {
+		this.lastGeneratedPolynom = this.generatedPolynom;
 		this.generatedPolynom = generatedPolynom;
 	}
 
@@ -77,5 +79,13 @@ public class DataBean {
 
 	public void setFinitesDifferences(Map<Integer, List<Double>> finitesDifferences) {
 		this.finitesDifferences = finitesDifferences;
+	}
+
+	public Polynom getLastGeneratedPolynom() {
+		return lastGeneratedPolynom;
+	}
+
+	public void setLastGeneratedPolynom(Polynom lastGeneratedPolynom) {
+		this.lastGeneratedPolynom = lastGeneratedPolynom;
 	}
 }

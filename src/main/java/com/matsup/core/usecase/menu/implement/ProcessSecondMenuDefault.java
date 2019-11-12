@@ -45,13 +45,13 @@ public class ProcessSecondMenuDefault implements ProcessSecondMenu {
 
 			if (optionSelected < 4) {
 				this.strategy.get(optionSelected).execute();
+				this.processThirdMenu.execute();
 			} else  if (optionSelected == 4){
 				this.processChangePoints.execute();
 			} else {
 				break;
 			}
 
-			this.processThirdMenu.execute();
 
 		}
 	}

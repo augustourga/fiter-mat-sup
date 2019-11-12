@@ -39,7 +39,8 @@ public class ProcessLagrangeDefault implements ProcessPolynomialGenerator {
 
 		Renders.renderPolynom(lagrangePolynom,
 				lagrangePolynom.degree(),
-				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
+				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()),
+				this.dataBean.getLastGeneratedPolynom());
 
 	}
 

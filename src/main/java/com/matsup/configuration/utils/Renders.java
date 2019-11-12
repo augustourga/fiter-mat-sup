@@ -9,9 +9,9 @@ public class Renders {
 
 	public static void renderThirdDescription() {
 		System.out.println("\n|--------------------------------------------------------------------------------|");
-		System.out.println("| ¿Y ahora? ¿Qué podemos hacer por ti?                                   		 |");
+		System.out.println("| ¿Y ahora? ¿Que podemos hacer por ti?                                   		 |");
 		System.out.println("|             																 	 |");
-		System.out.println("| 1)  Mostrar pasos de cálculo	             								 	 |");
+		System.out.println("| 1)  Mostrar pasos de calculo	             								 	 |");
 		System.out.println("| 2)  Especializar el polinomio en un valor K.									 |");
 		System.out.println("| 3)  Volver              										    			 |");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
@@ -19,7 +19,7 @@ public class Renders {
 
 	public static void renderSecondDescription() {
 		System.out.println("\n|--------------------------------------------------------------------------------|");
-		System.out.println("| ¿Qué método desea utilizar para obtener el polinomio interpolante?     		 |");
+		System.out.println("| ¿Qué metodo desea utilizar para obtener el polinomio interpolante?     		 |");
 		System.out.println("|             																 	 |");
 		System.out.println("| 1)  Lagrange																 	 |");
 		System.out.println("| 2)  Newton Gregory Progresivo													 |");
@@ -39,17 +39,22 @@ public class Renders {
 	}
 
 	public static void renderHeader() {
-		System.out.println("|  							 Matemática Superior   								 |");
-		System.out.println("|  							 [FINTER] - 2c 2019    								 |");
+		System.out.println("  							 Matematica Superior   				  			 	  ");
+		System.out.println("  							 [FINTER] - 2c 2019    						 		  ");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 	}
 
-	public static void renderPolynom(Polynom polynom, int degree, Boolean equispaced) {
+	public static void renderPolynom(Polynom polynom, int degree, Boolean equispaced, Polynom lastGeneratedPolynom) {
 		System.out.println("\n|--------------------------------------------------------------------------------|\n");
 		System.out.println("  El polinomio generado es: P(X)= " + polynom.toString());
 		System.out.println("\n  El grado de P(X) es  " + degree);
-		System.out.println("\n  ¿Es equiespaciado?  " + equispaced);
+		System.out.println("\n  ¿Es equiespaciado?  " + getYesOrNo(equispaced));
+		System.out.println("\n  ¿Es igual al polinomio anteriormente generado?  " + getYesOrNo(polynom.equals(lastGeneratedPolynom)));
 		System.out.println("\n|--------------------------------------------------------------------------------|\n\n");
+	}
+
+	private static String getYesOrNo(Boolean equispaced) {
+		return equispaced ? " SI" : " NO";
 	}
 
 	public static void renderSubPolynoms(Polynom polynom, int i) {

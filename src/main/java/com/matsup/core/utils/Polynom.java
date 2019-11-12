@@ -5,27 +5,6 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-	/*
- Copyright (c) 2017 Leontev Daniil
- prohormitrich53@gmail.com
- Permission is hereby granted, free of charge, to any person obtaining
- a copy of this software and associated documentation files (the
- "Software"), to deal in the Software without restriction, including
- without limitation the rights to use, copy, modify, merge, publish,
- distribute, sublicense, and/or sell copies of the Software, and to
- permit persons to whom the Software is furnished to do so, subject to
- the following conditions:
- The above copyright notice and this permission notice shall be included
- in all copies or substantial portions of the Software.
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
- CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
- TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
- SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-
 
 public class Polynom {
 	private double[] coeffs;
@@ -282,66 +261,6 @@ public class Polynom {
 		return p;
 	}
 
-
-	public Polynom differentiate() {
-		double[] c = this.getCoeffs();
-		double[] d = new double[c.length];
-		Polynom p;
-
-		for (int i = 0; i < d.length; i++) {
-			d[i] = 0.0;
-		}
-
-		if (c.length < 2) {
-			return new Polynom(new double[]{0.0});
-		}
-
-
-		for (int i = 1; i < c.length; i++) {
-			d[i - 1] = c[i] * i;
-		}
-
-		p = new Polynom(d);
-		p.recheck();
-
-		return p;
-	}
-
-	public Polynom differentiate(int n) {
-		if (n < 0) {
-			System.out.println("Only for non-negative n!");
-			return null;
-		}
-
-		if (n == 0) {
-			return new Polynom(this.getCoeffs());
-		} else if (n == 1) {
-			return this.differentiate();
-		}
-
-		Polynom p = new Polynom(this.getCoeffs());
-
-		int i = n;
-		while (i > 0) {
-			p = p.differentiate();
-			i--;
-		}
-
-		return p;
-	}
-
-	public Polynom antiderivative(double c) {
-		double[] o = this.getCoeffs();
-		double[] n = new double[o.length + 1];
-
-		n[0] = c;
-		for (int i = 1; i < n.length; i++) {
-			n[i] = o[i - 1] / i;
-		}
-
-		return new Polynom(n);
-	}
-
 	public Polynom divideCoeffs(double c) {
 		double[] o = this.getCoeffs();
 
@@ -349,14 +268,6 @@ public class Polynom {
 			o[i] = o[i]/c;
 		}
 		return new Polynom(o);
-	}
-
-	public Polynom antiderivative() {
-		return this.antiderivative(0.0);
-	}
-
-	public double integrate(double a, double b) {
-		return this.antiderivative().valueOf(b) - this.antiderivative().valueOf(a);
 	}
 
 	public double valueOf(double x) {
@@ -368,26 +279,6 @@ public class Polynom {
 		}
 
 		return ans;
-	}
-
-	public double[] valueOf(double[] x) {
-		double[] y = new double[x.length];
-
-		for (int i = 0; i < y.length; i++) {
-			y[i] = this.valueOf(x[i]);
-		}
-
-		return y;
-	}
-
-	public double[] valueOf(int[] x) {
-		double[] y = new double[x.length];
-
-		for (int i = 0; i < y.length; i++) {
-			y[i] = this.valueOf(x[i]);
-		}
-
-		return y;
 	}
 
 	public int sign(double x) {
@@ -446,23 +337,6 @@ public class Polynom {
 		}
 
 		return new Polynom[]{resultQ, dividend};
-	}
-
-	public double[] solve() {
-		Solver solver = new Solver();
-		return solver.solve(this);
-
-	}
-
-	public double[] solve(double eps) {
-		double min = 1E-15;
-		if (eps < min) {
-			eps = min;
-			System.out.println("Setting EPS to maximal possible accuracy 1E-15");
-		}
-		Solver solver = new Solver(eps);
-		return solver.solve(this);
-
 	}
 
 	public Polynom gcd(Polynom polynom) {

@@ -48,7 +48,8 @@ public class ProcessNewtonGregoryRegresiveDefault implements ProcessPolynomialGe
 
 		Renders.renderPolynom(newtonGregoryProgresivePolynom,
 				newtonGregoryProgresivePolynom.degree(),
-				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
+				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()),
+				this.dataBean.getLastGeneratedPolynom());
 
 
 	}
