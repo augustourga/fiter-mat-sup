@@ -39,8 +39,8 @@ public class Renders {
 	}
 
 	public static void renderHeader() {
-		System.out.println("  							 Matematica Superior   				  			 	  ");
-		System.out.println("  							 [FINTER] - 2c 2019    						 		  ");
+		System.out.println("  				 Matematica Superior   				  			 	  ");
+		System.out.println("  	   		 	 [FINTER] - 2c 2019    						 		  ");
 		System.out.println("|--------------------------------------------------------------------------------|\n\n");
 	}
 
