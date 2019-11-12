@@ -27,7 +27,7 @@ public class ProcessNewtonGregoryProgresiveTest {
 	@Test
 	public void whenProcessNewtonGregoryNotEquispaced_mustBeProcess() {
 
-		/* [{"X":1,"Y":1},{"X":3,"Y":3},{"X":4,"Y":13},{"X":5,"Y":37},{"X":7,"Y":151}] */
+			/* [{"X":1,"Y":1},{"X":3,"Y":3},{"X":4,"Y":13},{"X":5,"Y":37},{"X":7,"Y":151}] */
 
 		Point point1 = Point.builder().X(1.0).Y(1.0).build();
 		Point point2 = Point.builder().X(3.0).Y(3.0).build();

@@ -20,7 +20,6 @@ public class ProcessActionShowSteps implements ProcessAction {
 
 	@Override
 	public void execute() {
-
 		if (this.dataBean.getMethod().equals(Method.LAGRANGE)){
 			this.renderLagrange();
 		} else {
@@ -28,7 +27,7 @@ public class ProcessActionShowSteps implements ProcessAction {
 		}
 	}
 
-	private void renderNewtonGregory() {
+	private void renderNewtonGregory(){
 		for (int i = 0; i <= this.dataBean.getFinitesDifferences().size() - 1; i++) {
 			Renders.renderFinitesDifferences(this.dataBean.getFinitesDifferences().get(i), i);
 		}
