@@ -2,6 +2,7 @@ package com.matsup.core.usecase.polynomial.implement;
 
 import com.matsup.configuration.utils.Renders;
 import com.matsup.core.entities.DataBean;
+import com.matsup.core.entities.Method;
 import com.matsup.core.utils.ProcessCommonPolinomial;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 import com.matsup.core.utils.FinitesDifferencesGenerator;
@@ -35,10 +36,14 @@ public class ProcessNewtonGregoryProgresiveDefault implements ProcessPolynomialG
 		this.dataBean.setEquispaced(ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
 		this.dataBean.setDegree(newtonGregoryProgresivePolynom.degree());
 		this.dataBean.setSubPolynoms(subPolynom);
+		this.dataBean.setMethod(Method.PROGRESIVE_NEWTON_GREGORY);
+		this.dataBean.setFinitesDifferences(finitesDifferences);
+
 
 		Renders.renderPolynom(newtonGregoryProgresivePolynom,
 				newtonGregoryProgresivePolynom.degree(),
-				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
+				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()),
+				this.dataBean.getLastGeneratedPolynom());
 
 
 	}

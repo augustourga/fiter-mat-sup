@@ -3,6 +3,7 @@ package com.matsup.core.usecase.polynomial.implement;
 
 import com.matsup.core.entities.DataBean;
 import com.matsup.configuration.utils.Renders;
+import com.matsup.core.entities.Method;
 import com.matsup.core.utils.ProcessCommonPolinomial;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 import com.matsup.core.utils.LxisGenerator;
@@ -34,10 +35,12 @@ public class ProcessLagrangeDefault implements ProcessPolynomialGenerator {
 		this.dataBean.setEquispaced(ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
 		this.dataBean.setDegree(lagrangePolynom.degree());
 		this.dataBean.setSubPolynoms(lxiList);
+		this.dataBean.setMethod(Method.LAGRANGE);
 
 		Renders.renderPolynom(lagrangePolynom,
 				lagrangePolynom.degree(),
-				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
+				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()),
+				this.dataBean.getLastGeneratedPolynom());
 
 	}
 

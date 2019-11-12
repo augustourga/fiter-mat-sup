@@ -3,6 +3,7 @@ package com.matsup.core.usecase.polynomial.implement;
 import com.google.common.collect.Lists;
 import com.matsup.configuration.utils.Renders;
 import com.matsup.core.entities.DataBean;
+import com.matsup.core.entities.Method;
 import com.matsup.core.entities.Point;
 import com.matsup.core.usecase.polynomial.ProcessPolynomialGenerator;
 import com.matsup.core.utils.FinitesDifferencesGenerator;
@@ -28,9 +29,9 @@ public class ProcessNewtonGregoryRegresiveDefault implements ProcessPolynomialGe
 
 	@Override
 	public void execute() {
+		Map<Integer,List<Double>> finitesDifferences = FinitesDifferencesGenerator.generateFinitesDifferences(this.dataBean.getPoints());
 
-		Map<Integer,List<Double>> reverseFinitesDifferences = FinitesDifferencesGenerator.invertFinitesDifferences(
-				FinitesDifferencesGenerator.generateFinitesDifferences(this.dataBean.getPoints()));
+		Map<Integer,List<Double>> reverseFinitesDifferences = FinitesDifferencesGenerator.invertFinitesDifferences(finitesDifferences);
 
 		List<Polynom> subPolynom = FinitesDifferencesGenerator.generateSubPolynoms(reverseFinitesDifferences,
 				this.reversePoints(this.dataBean.getPoints()));
@@ -41,10 +42,14 @@ public class ProcessNewtonGregoryRegresiveDefault implements ProcessPolynomialGe
 		this.dataBean.setEquispaced(ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
 		this.dataBean.setDegree(newtonGregoryProgresivePolynom.degree());
 		this.dataBean.setSubPolynoms(subPolynom);
+		this.dataBean.setMethod(Method.REGRESIVE_NEWTON_GREGORY);
+		this.dataBean.setFinitesDifferences(finitesDifferences);
+
 
 		Renders.renderPolynom(newtonGregoryProgresivePolynom,
 				newtonGregoryProgresivePolynom.degree(),
-				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()));
+				ProcessCommonPolinomial.isEquispaced(this.dataBean.getPoints()),
+				this.dataBean.getLastGeneratedPolynom());
 
 
 	}

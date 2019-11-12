@@ -2,6 +2,7 @@ package com.matsup.core.usecase.polynomial;
 
 import com.google.common.collect.Lists;
 import com.matsup.core.entities.DataBean;
+import com.matsup.core.entities.Method;
 import com.matsup.core.entities.Point;
 import com.matsup.core.usecase.polynomial.implement.ProcessNewtonGregoryRegresiveDefault;
 import com.matsup.core.utils.Polynom;
@@ -40,6 +41,7 @@ public class ProcessNewtonGregoryRegresiveTest {
 		verify(this.dataBean).setGeneratedPolynom(new Polynom("- 3.0 + 8.0·x - 5.0·x^2 + 1.0·x^3"));
 		verify(this.dataBean).setEquispaced(Boolean.FALSE);
 
+
 		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(
 				new Polynom("151.0"),
 				new Polynom(" - 399.0 + 57.0·x"),
@@ -65,6 +67,7 @@ public class ProcessNewtonGregoryRegresiveTest {
 		verify(this.dataBean).setDegree(3);
 		verify(this.dataBean).setGeneratedPolynom(new Polynom("1.0 - 0.16666666666666674·x + 0.16666666666666666·x^3"));
 		verify(this.dataBean).setEquispaced(Boolean.TRUE);
+
 
 		verify(this.dataBean).setSubPolynoms(Lists.newArrayList(
 				new Polynom("5.0"),

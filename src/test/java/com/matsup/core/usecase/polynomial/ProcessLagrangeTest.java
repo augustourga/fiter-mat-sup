@@ -2,6 +2,7 @@ package com.matsup.core.usecase.polynomial;
 
 import com.google.common.collect.Lists;
 import com.matsup.core.entities.DataBean;
+import com.matsup.core.entities.Method;
 import com.matsup.core.entities.Point;
 import com.matsup.core.usecase.polynomial.implement.ProcessLagrangeDefault;
 import com.matsup.core.utils.Polynom;

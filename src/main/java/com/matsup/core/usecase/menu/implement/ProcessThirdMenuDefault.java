@@ -18,11 +18,9 @@ public class ProcessThirdMenuDefault implements ProcessThirdMenu {
 
 	@Inject
 	public ProcessThirdMenuDefault(@Named("showSteps") ProcessAction processShowSteps,
-								   @Named("specializePolynom")ProcessAction processSpecializePolynom) {
+								   @Named("specializePolynom") ProcessAction processSpecializePolynom) {
 		this.strategy.put(1,processShowSteps);
 		this.strategy.put(2,processSpecializePolynom);
-
-
 	}
 
 	@Override

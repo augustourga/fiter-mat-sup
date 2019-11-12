@@ -3,6 +3,7 @@ package com.matsup.core.entities;
 import com.matsup.core.utils.Polynom;
 
 import java.util.List;
+import java.util.Map;
 
 public class DataBean {
 
@@ -11,11 +12,17 @@ public class DataBean {
 
 	Polynom generatedPolynom;
 
+	Polynom lastGeneratedPolynom;
+
 	List<Polynom> subPolynoms;
 
 	Boolean isEquispaced;
 
 	int degree;
+
+	Method method;
+
+	Map<Integer, List<Double>> finitesDifferences;
 
 	public List<Point> getPoints() {
 		return points;
@@ -30,6 +37,7 @@ public class DataBean {
 	}
 
 	public void setGeneratedPolynom(Polynom generatedPolynom) {
+		this.lastGeneratedPolynom = this.generatedPolynom;
 		this.generatedPolynom = generatedPolynom;
 	}
 
@@ -57,45 +65,27 @@ public class DataBean {
 		this.subPolynoms = subPolynoms;
 	}
 
-	public static DataBeanBuilder builder() {
-		return new DataBeanBuilder();
+	public Method getMethod() {
+		return method;
 	}
 
+	public void setMethod(Method method) {
+		this.method = method;
+	}
 
-	public static final class DataBeanBuilder {
-		private DataBean dataBean;
+	public Map<Integer, List<Double>> getFinitesDifferences() {
+		return finitesDifferences;
+	}
 
-		private DataBeanBuilder() {
-			dataBean = new DataBean();
-		}
+	public void setFinitesDifferences(Map<Integer, List<Double>> finitesDifferences) {
+		this.finitesDifferences = finitesDifferences;
+	}
 
-		public DataBeanBuilder points(List<Point> points) {
-			dataBean.setPoints(points);
-			return this;
-		}
+	public Polynom getLastGeneratedPolynom() {
+		return lastGeneratedPolynom;
+	}
 
-		public DataBeanBuilder generatedPolynom(Polynom generatedPolynom) {
-			dataBean.setGeneratedPolynom(generatedPolynom);
-			return this;
-		}
-
-		public DataBeanBuilder subPolynoms(List<Polynom> subPolynoms) {
-			dataBean.setSubPolynoms(subPolynoms);
-			return this;
-		}
-
-		public DataBeanBuilder isEquispaced(Boolean isEquispaced) {
-			dataBean.setEquispaced(isEquispaced);
-			return this;
-		}
-
-		public DataBeanBuilder degree(int degree) {
-			dataBean.setDegree(degree);
-			return this;
-		}
-
-		public DataBean build() {
-			return dataBean;
-		}
+	public void setLastGeneratedPolynom(Polynom lastGeneratedPolynom) {
+		this.lastGeneratedPolynom = lastGeneratedPolynom;
 	}
 }

@@ -5,6 +5,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
 import com.matsup.core.entities.DataBean;
 import com.matsup.core.usecase.actions.ProcessAction;
+import com.matsup.core.usecase.actions.implement.ProcessActionChangePoints;
 import com.matsup.core.usecase.actions.implement.ProcessActionShowSteps;
 import com.matsup.core.usecase.actions.implement.ProcessActionSpecializePolynom;
 import com.matsup.core.usecase.menu.ProcessFirstMenu;
@@ -35,6 +36,7 @@ public class BasicModule extends AbstractModule {
 		bind(ProcessPolynomialGenerator.class).annotatedWith(Names.named("newtonGregoryRegresive")).to(ProcessNewtonGregoryRegresiveDefault.class);
 		bind(ProcessAction.class).annotatedWith(Names.named("showSteps")).to(ProcessActionShowSteps.class);
 		bind(ProcessAction.class).annotatedWith(Names.named("specializePolynom")).to(ProcessActionSpecializePolynom.class);
+		bind(ProcessAction.class).annotatedWith(Names.named("changePoints")).to(ProcessActionChangePoints.class);
 
 
 	}
